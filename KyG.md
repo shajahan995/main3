@@ -1,4 +1,4 @@
-# Project Title : ping pong
+# Project Title : Ping Pong
 ### Batch NO :
 ### Mentor Name :
 ### Github Link : https://github.com/shajahan995/main
