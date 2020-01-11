@@ -3,14 +3,15 @@ import winsound
 
 window = turtle.Screen()
 window.title("Ping Pong")
-window.bgcolor("Black")
+window.bgcolor("Aqua")
 window.setup(width=800, height=600)
 window.tracer(0)    # stops the window from updating
+
 
 #   1st Paddle
 paddle_one = turtle.Turtle()
 paddle_one.speed(0)     # speed of animation, '0' for MAX
-paddle_one.color("white")
+paddle_one.color("Black")
 paddle_one.shape("square")
 paddle_one.shapesize(stretch_wid=5, stretch_len=1)  # 20*5 height
 paddle_one.penup()
@@ -56,6 +57,8 @@ def paddle_one_up():
     y += 30
     paddle_one.sety(y)
 
+#game over
+
 
 def paddle_one_down():
     y = paddle_one.ycor()   # coordinates
@@ -88,6 +91,7 @@ window.onkeypress(paddle_two_down, 'Down')
 while True:
     window.update()
 
+   
     # Ball Movement
     ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
@@ -116,7 +120,7 @@ while True:
         ball.dx *= -1
         score_two += 1
         write_score.clear()
-        write_score.write("Player One: {}           Player Two: {}".format(score_one, score_two), align="center",
+        write_score.write("Player One: {}       Player Two: {}".format(score_one, score_two), align="center",
                           font=("Courier", 24, "normal"))
 
     # Collisions b/w ball & paddle
